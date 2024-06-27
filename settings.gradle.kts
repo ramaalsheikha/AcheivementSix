@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AcheivementSix"
 include(":app")
- 
+include(":data")
