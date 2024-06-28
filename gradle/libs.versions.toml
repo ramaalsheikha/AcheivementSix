@@ -1,0 +1,32 @@
+# (library)  -------------->   "androidx.core : core-ktx : 1.13.1"
+#The library has three section "groub      : name     : version"
+#(plugin) --> id("com.android.application") version "8.5.0"
+#the plugin has two section id and version
+# The Gradle Version Catalog countain three section (1)[versions] (2)[libreries] (3)[plugins]
+[versions]
+appcompat = "1.7.0"
+constraintlayout = "2.1.4"
+coreKtx = "1.13.1"
+androidApplicationPlugin = "8.5.0"
+compileSdk = "34"
+gson = "2.11.0"
+material = "1.12.0"
+minSdk = "24"
+retrofit = "2.11.0"
+targetSdk = "34"
+versionCode = "1"
+versionName = "1.0"
+jvmTarget = "1.8"
+
+[libraries]
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+androidx-core-ktx = {group = "androidx.core" , name = "core-ktx" , version.ref = "coreKtx"}
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+
+
+[plugins]
+androidApplication = {id = "com.android.application" , version.ref = "androidApplicationPlugin"}

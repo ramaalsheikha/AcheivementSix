@@ -5,10 +5,10 @@ plugins {
 
 android {
     namespace = "com.example.acheivementsix.data"
-    compileSdk = 33
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        minSdk = 24
+        minSdk = libs.versions.minSdk.get().toInt()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -28,18 +28,19 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = libs.versions.jvmTarget.get()
     }
 }
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("com.google.android.material:material:1.12.0")
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
     //Retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation(libs.retrofit)
     //Retrofit Converter
-    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
-
+    implementation (libs.converter.gson)
+    //serializedName
+    implementation (libs.gson)
 }
