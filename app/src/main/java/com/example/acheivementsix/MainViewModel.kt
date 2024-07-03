@@ -1,5 +1,6 @@
 package com.example.acheivementsix
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class MainViewModel:ViewModel() {
     private val repository = Repository()
-    val achievementSuccessLivedata:MutableLiveData<AchievementResponseModel> =  MutableLiveData()
+    val achievementSuccessLivedata:MutableLiveData<List<AchievementResponseModel>> =  MutableLiveData()
     val achievementErrorLivedata:MutableLiveData<Exception> = MutableLiveData()
 
     init {
@@ -19,11 +20,11 @@ class MainViewModel:ViewModel() {
    fun getAchievements(){
        viewModelScope.launch {
            try {
-               delay(8000)
                val response = repository.getAchievements()
                achievementSuccessLivedata.postValue(response)
            }catch (e:Exception){
                achievementErrorLivedata.postValue(e)
+               Log.e("TAG",e.localizedMessage)
            }
 
        }

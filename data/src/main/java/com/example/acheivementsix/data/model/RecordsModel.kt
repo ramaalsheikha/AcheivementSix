@@ -4,6 +4,6 @@ data class RecordsModel (
     val id:String,
     val title:String,
     val label:String,
-    val active:String,
-    val image:Int,
+    val active:Boolean,
+    val image:String,
 )
