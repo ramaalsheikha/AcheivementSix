@@ -10,6 +10,7 @@ coreKtx = "1.13.1"
 androidApplicationPlugin = "8.5.0"
 compileSdk = "34"
 gson = "2.11.0"
+lifecycleViewmodelKtx = "2.8.3"
 material = "1.12.0"
 minSdk = "24"
 retrofit = "2.11.0"
@@ -22,6 +23,7 @@ jvmTarget = "1.8"
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
 androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
 androidx-core-ktx = {group = "androidx.core" , name = "core-ktx" , version.ref = "coreKtx"}
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 material = { module = "com.google.android.material:material", version.ref = "material" }

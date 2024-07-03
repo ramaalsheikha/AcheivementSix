@@ -44,4 +44,5 @@ dependencies {
     //Retrofit
     implementation(libs.retrofit)
     implementation(project(":data"))
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
 }

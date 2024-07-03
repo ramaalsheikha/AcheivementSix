@@ -6,7 +6,7 @@ import com.example.acheivementsix.data.network.RetrofitBuilder
 
 class Repository {
 
-    fun getAchievements():AchievementResponseModel{
+    suspend fun getAchievements():List<AchievementResponseModel>{
         val achievementApi = RetrofitBuilder.getInstance().create(IProjectApi::class.java)
         return achievementApi.getAchievements()
     }
