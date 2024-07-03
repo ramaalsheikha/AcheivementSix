@@ -43,4 +43,5 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     //Retrofit
     implementation(libs.retrofit)
+    implementation(project(":data"))
 }
