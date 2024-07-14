@@ -9,6 +9,7 @@ constraintlayout = "2.1.4"
 coreKtx = "1.13.1"
 androidApplicationPlugin = "8.5.0"
 compileSdk = "34"
+glide = "4.11.0"
 gson = "2.11.0"
 lifecycleViewmodelKtx = "2.8.3"
 material = "1.12.0"
@@ -18,6 +19,10 @@ targetSdk = "34"
 versionCode = "1"
 versionName = "1.0"
 jvmTarget = "1.8"
+kotlin = "1.9.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
 
 [libraries]
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -25,10 +30,16 @@ androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayo
 androidx-core-ktx = {group = "androidx.core" , name = "core-ktx" , version.ref = "coreKtx"}
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 
 
 [plugins]
 androidApplication = {id = "com.android.application" , version.ref = "androidApplicationPlugin"}
+androidLibrary = { id = "com.android.library", version.ref = "androidApplicationPlugin" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

@@ -26,6 +26,10 @@ android {
             )
         }
     }
+    buildFeatures{
+        viewBinding = true
+        dataBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -43,6 +47,9 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     //Retrofit
     implementation(libs.retrofit)
+    //to access data module
     implementation(project(":data"))
+    //to access core module
+    implementation(project(":core"))
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
 }

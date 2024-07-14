@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import com.example.acheivementsix.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: MainViewModel
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         initViewModel()
         initObserver()
@@ -18,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initObserver() {
         viewModel.achievementSuccessLivedata.observe(this) { response ->
-            Toast.makeText(this, "Response $response", Toast.LENGTH_LONG).show()
+            binding.rvAchievements.adapter = AchievementsAdapter(response)
         }
 
             viewModel.achievementErrorLivedata.observe(this) { exception ->

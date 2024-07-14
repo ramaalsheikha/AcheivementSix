@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "AcheivementSix"
 include(":app")
 include(":data")
+include(":core")
